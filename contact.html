@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Dabs Dynamic International School</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="font-sans text-gray-800">
+    <!-- HEADER / NAVBAR -->
+    <header class="bg-green-100">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center space-x-3">
+          <img src="dabs-logo.png" alt="Dabs Dynamic Logo" class="h-14" />
+          <span class="font-bold text-green-700 text-lg">
+            Dabs Dynamic Int’l School
+          </span>
+        </div>
+
+        <nav>
+          <ul class="hidden md:flex space-x-6 font-medium">
+            <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+            <li><a href="about.html" class="hover:text-green-700">About</a></li>
+            <li>
+              <a href="academics.html" class="hover:text-green-700"
+                >Academics</a
+              >
+            </li>
+            <li>
+              <a href="admissions.html" class="hover:text-green-700"
+                >Admissions</a
+              >
+            </li>
+            <li>
+              <a href="gallery.html" class="hover:text-green-700">Gallery</a>
+            </li>
+            <li>
+              <a href="contact.html" class="text-green-700 font-semibold"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- INTRO SECTION -->
+    <section class="bg-green-50 py-16">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold text-green-800 mb-4">
+          Contact Us
+        </h1>
+        <p class="text-lg">
+          We are always happy to hear from parents, guardians, and visitors.
+          Reach out to us for enquiries, admissions, or general information.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS AND FORM -->
+    <section class="py-16">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-10">
+        <!-- CONTACT INFO -->
+        <div>
+          <h2 class="text-2xl font-bold text-green-700 mb-6">Get in Touch</h2>
+          <div class="space-y-4">
+            <p><strong>Phone:</strong><br />07030746293<br />08030449893</p>
+            <p><strong>Email:</strong><br />dabsintschool@gmail.com</p>
+            <p>
+              <strong>School Locations:</strong><br />
+              <span class="block mt-2">
+                <strong>School 1:</strong><br />
+                32, Segun Falana Street, Behind MFM,<br />
+                Along Mowe, Ogun State
+              </span>
+              <span class="block mt-3">
+                <strong>School 2:</strong><br />
+                Abule-Ori Road, Omu Aleku,<br />
+                Mowe, Ogun State
+              </span>
+            </p>
+            <p>
+              <strong>Social Media:</strong><br />Facebook & TikTok —
+              <em>Dabs Dynamic Schools</em>
+            </p>
+          </div>
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="bg-gray-50 p-8 rounded shadow">
+          <h2 class="text-2xl font-bold text-green-700 mb-6">
+            Send Us a Message
+          </h2>
+          <form id="whatsappForm" class="space-y-4">
+            <div>
+              <label class="block mb-1 font-medium">Full Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your full name"
+                required
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+              />
+            </div>
+            <div>
+              <label class="block mb-1 font-medium">Message</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Type your message here..."
+                required
+                class="w-full border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="bg-green-700 text-white px-6 py-2 rounded font-semibold hover:bg-green-800 w-full"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-green-900 text-white py-6">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p class="mb-2 font-semibold">Dabs Dynamic International School</p>
+        <p class="text-sm">Knowledge Cum Discipline © 2006</p>
+      </div>
+    </footer>
+
+    <!-- WHATSAPP SCRIPT -->
+    <script>
+      document
+        .getElementById("whatsappForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          if (!name || !message) {
+            alert("Please fill out both fields.");
+            return;
+          }
+
+          const adminNumber = "2348030449893"; // Replace with your admin's WhatsApp number
+          const whatsappMessage = `Hello, my name is ${name}. ${message}`;
+          const whatsappURL = `https://wa.me/${adminNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+          window.open(whatsappURL, "_blank");
+        });
+    </script>
+
+    <!-- WHATSAPP FLOATING BUTTON -->
+    <a
+      href="https://wa.me/2348030449893"
+      target="_blank"
+      class="fixed bottom-6 right-6 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg flex items-center justify-center"
+      title="Message us on WhatsApp"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M20.52 3.48A11.902 11.902 0 0 0 12 0C5.373 0 0 5.373 0 12c0 2.106.544 4.078 1.488 5.785L0 24l6.425-1.472A11.924 11.924 0 0 0 12 24c6.627 0 12-5.373 12-12 0-3.192-1.236-6.189-3.48-8.52zM12 22c-1.976 0-3.83-.632-5.33-1.696l-.38-.228-3.814.874.805-3.727-.247-.39A9.956 9.956 0 0 1 2 12c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10zm5.272-7.727c-.265-.133-1.566-.772-1.808-.861-.242-.089-.418-.133-.594.133s-.681.861-.833 1.038-.307.2-.572.067c-.265-.133-1.116-.411-2.123-1.309-.785-.699-1.314-1.562-1.468-1.827-.154-.265-.016-.408.116-.54.119-.118.265-.307.398-.459.133-.152.177-.265.265-.442.089-.177.044-.333-.022-.459-.067-.133-.593-1.429-.812-1.963-.213-.51-.43-.44-.594-.448l-.507-.009c-.177 0-.459.066-.7.333s-.918.897-.918 2.187.941 2.532 1.073 2.709c.133.177 1.854 2.832 4.5 3.965.63.272 1.12.434 1.503.555.631.201 1.207.172 1.66.104.506-.072 1.566-.64 1.788-1.258.221-.619.221-1.15.154-1.258-.067-.108-.242-.177-.507-.31z"
+        />
+      </svg>
+    </a>
+  </body>
+</html>
