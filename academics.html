@@ -10,16 +10,25 @@
     <!-- NAVBAR -->
     <header class="bg-green-100">
       <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
         <div class="flex items-center gap-3">
           <img
             src="dabs-logo.png"
             alt="Dabs Dynamic International Schools Logo"
             class="h-16 w-16 object-contain"
           />
-          <span class="text-lg font-bold text-green-900"
-            >Dabs Dynamic Int’l Schools</span
-          >
+
+          <div class="leading-tight">
+            <span class="block text-lg font-bold text-green-900">
+              Dabs Dynamic Int’l Schools
+            </span>
+            <span class="block text-xs font-medium text-green-700">
+              GOVT. APPROVED • RC NO: 2435402
+            </span>
+          </div>
         </div>
+
+        <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-6 font-medium">
           <li><a href="index.html" class="hover:text-green-700">Home</a></li>
           <li><a href="about.html" class="hover:text-green-700">About</a></li>
@@ -38,11 +47,21 @@
             <a href="contact.html" class="hover:text-green-700">Contact</a>
           </li>
         </ul>
-        <button id="menuBtn" class="md:hidden text-green-900 text-2xl">
-          ☰
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="menuBtn"
+          class="md:hidden text-green-900 text-2xl focus:outline-none"
+        >
+          <span id="menuIcon">☰</span>
         </button>
       </nav>
-      <div id="mobileMenu" class="hidden md:hidden bg-green-50 px-4 pb-4">
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="md:hidden bg-green-50 px-4 pb-4 hidden transition-all duration-300"
+      >
         <ul class="space-y-3 font-medium">
           <li><a href="index.html" class="block">Home</a></li>
           <li><a href="about.html" class="block">About</a></li>
@@ -126,5 +145,22 @@
         <p class="text-sm">Knowledge Cum Discipline © 2006</p>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close menu when any link is clicked
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      });
+    </script>
   </body>
 </html>

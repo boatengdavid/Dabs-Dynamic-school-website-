@@ -10,40 +10,63 @@
   </head>
 
   <body class="font-sans text-gray-800">
-    <!-- HEADER / NAVBAR -->
+    <!-- NAVBAR -->
     <header class="bg-green-100">
-      <div
-        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <div class="flex items-center space-x-3">
-          <img src="dabs-logo.png" alt="Dabs Dynamic Logo" class="h-14" />
-          <span class="font-bold text-green-700 text-lg">
-            Dabs Dynamic Int’l School
-          </span>
+      <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img
+            src="dabs-logo.png"
+            alt="Dabs Dynamic International Schools Logo"
+            class="h-16 w-16 object-contain"
+          />
+
+          <div class="leading-tight">
+            <span class="block text-lg font-bold text-green-900">
+              Dabs Dynamic Int’l Schools
+            </span>
+            <span class="block text-xs font-medium text-green-700">
+              GOVT. APPROVED • RC NO: 2435402
+            </span>
+          </div>
         </div>
 
-        <nav>
-          <ul class="hidden md:flex space-x-6 font-medium">
-            <li><a href="index.html" class="hover:text-green-700">Home</a></li>
-            <li><a href="about.html" class="hover:text-green-700">About</a></li>
-            <li>
-              <a href="academics.html" class="hover:text-green-700"
-                >Academics</a
-              >
-            </li>
-            <li>
-              <a href="admissions.html" class="text-green-700 font-semibold"
-                >Admissions</a
-              >
-            </li>
-            <li>
-              <a href="gallery.html" class="hover:text-green-700">Gallery</a>
-            </li>
-            <li>
-              <a href="contact.html" class="hover:text-green-700">Contact</a>
-            </li>
-          </ul>
-        </nav>
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 font-medium">
+          <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+          <li><a href="about.html" class="hover:text-green-700">About</a></li>
+          <li>
+            <a href="academics.html" class="hover:text-green-700">Academics</a>
+          </li>
+          <li>
+            <a href="admissions.html" class="hover:text-green-700"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html" class="hover:text-green-700">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-green-700">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="md:hidden text-green-900 text-2xl">
+          ☰
+        </button>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden bg-green-50 px-4 pb-4">
+        <ul class="space-y-3 font-medium">
+          <li><a href="index.html" class="block">Home</a></li>
+          <li><a href="about.html" class="block">About</a></li>
+          <li><a href="academics.html" class="block">Academics</a></li>
+          <li><a href="admissions.html" class="block">Admissions</a></li>
+          <li><a href="gallery.html" class="block">Gallery</a></li>
+          <li><a href="contact.html" class="block">Contact</a></li>
+        </ul>
       </div>
     </header>
 
@@ -163,5 +186,23 @@
         <p class="text-sm">Knowledge Cum Discipline © 2006</p>
       </div>
     </footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close menu when any link is clicked
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  });
+</script>
+
   </body>
 </html>

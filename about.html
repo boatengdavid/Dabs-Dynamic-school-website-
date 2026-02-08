@@ -12,15 +12,22 @@
     <header class="bg-green-100">
       <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
         <div class="flex items-center gap-3">
-          <img
-            src="dabs-logo.png"
-            alt="Dabs Dynamic International Schools Logo"
-            class="h-16 w-16 object-contain"
-          />
-          <span class="text-lg font-bold text-green-900"
-            >Dabs Dynamic Int’l Schools</span
-          >
-        </div>
+  <img
+    src="dabs-logo.png"
+    alt="Dabs Dynamic International Schools Logo"
+    class="h-16 w-16 object-contain"
+  />
+
+  <div class="leading-tight">
+    <span class="block text-lg font-bold text-green-900">
+      Dabs Dynamic Int’l Schools
+    </span>
+    <span class="block text-xs font-medium text-green-700">
+      GOVT. APPROVED • RC NO: 2435402
+    </span>
+  </div>
+</div>
+
         <ul class="hidden md:flex space-x-6 font-medium">
           <li><a href="index.html" class="hover:text-green-700">Home</a></li>
           <li><a href="about.html" class="hover:text-green-700">About</a></li>
@@ -180,7 +187,7 @@
             Administrator
           </h3>
           <p>
-            <strong>MRS. EDEMA SANDRA</strong>
+            <strong>Mrs. Sandra Edema</strong>
           serves as the architect of high academic standards. With a focus on the school’s mission to "recapture the standards of old," this office ensures that the curriculum is delivered with precision and modern flair. By overseeing a team of disciplined and dedicated teachers, Mrs. Edema Sandra ensures that every activity-based lesson is executed to perfection. Their leadership is defined by Effectiveness and Accountability, ensuring that Dabs Dynamic International School 1 (Mowe) remains a center of academic merit and administrative order.
           </p>
         </div>
@@ -189,12 +196,12 @@
             Administrator
           </h3>
           <p>
-            <strong>Miss Florence</strong>
+            <strong>Miss Florence Okoro</strong>
           focuses on the "Total Child" and the school's vision of raising world-class leaders. This office prioritizes the individual needs of every pupil, ensuring the environment is conducive to building confidence and a "God-fearing" character. By fostering a strong sense of Teamwork and Commitment, Miss Florence bridges the gap between the classroom and the community. Their leadership ensures that Dabs Dynamic International School 2 (Aleku) is a place where students are not only academically sound but also socially responsible agents of change.
         </p>
         </div>
         </div>
-      </div>s
+      </div>
     </section>
 
    <!-- FOOTER -->
@@ -208,6 +215,23 @@
       </p>
     </div>
   </footer>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // Close menu when any link is clicked
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  });
+</script>
 
 </body>
 </html>
