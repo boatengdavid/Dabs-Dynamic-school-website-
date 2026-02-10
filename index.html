@@ -10,13 +10,28 @@
         theme: {
           extend: {
             keyframes: {
-              fadeUp: {
-                "0%": { opacity: 0, transform: "translateY(30px)" },
-                "100%": { opacity: 1, transform: "translateY(0)" },
+              slideIn: {
+                "0%": { transform: "translateX(-100%)", opacity: 0 },
+                "100%": { transform: "translateX(0)", opacity: 1 },
+              },
+              slideInDelay: {
+                "0%": { transform: "translateX(100%)", opacity: 0 },
+                "100%": { transform: "translateX(0)", opacity: 1 },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(50px)", opacity: 0 },
+                "100%": { transform: "translateY(0)", opacity: 1 },
+              },
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
               },
             },
             animation: {
-              fadeUp: "fadeUp 0.9s ease-out forwards",
+              slideIn: "slideIn 1s forwards",
+              slideInDelay: "slideInDelay 1s 0.5s forwards",
+              slideUp: "slideUp 1s 1s forwards",
+              fadeIn: "fadeIn 1.5s 1s forwards",
             },
           },
         },
@@ -34,7 +49,6 @@
             alt="Dabs Dynamic International Schools Logo"
             class="h-16 w-16 object-contain"
           />
-
           <div class="leading-tight">
             <span class="block text-lg font-bold text-green-900">
               Dabs Dynamic Int’l Schools
@@ -66,20 +80,68 @@
         </ul>
 
         <!-- Mobile Menu Button -->
-        <button id="menuBtn" class="md:hidden text-green-900 text-2xl">
-          ☰
+
+        <button
+          id="menuBtn"
+          class="md:hidden flex flex-col gap-1 w-5 h-5 relative focus:outline-none"
+        >
+          <span
+            class="bar block h-0.5 w-full bg-green-900 rounded transition-all duration-300"
+          ></span>
+          <span
+            class="bar block h-0.5 w-full bg-green-900 rounded transition-all duration-300"
+          ></span>
+          <span
+            class="bar block h-0.5 w-full bg-green-900 rounded transition-all duration-300"
+          ></span>
         </button>
       </nav>
 
       <!-- Mobile Menu -->
       <div id="mobileMenu" class="hidden md:hidden bg-green-50 px-4 pb-4">
         <ul class="space-y-3 font-medium">
-          <li><a href="index.html" class="block">Home</a></li>
-          <li><a href="about.html" class="block">About</a></li>
-          <li><a href="academics.html" class="block">Academics</a></li>
-          <li><a href="admissions.html" class="block">Admissions</a></li>
-          <li><a href="gallery.html" class="block">Gallery</a></li>
-          <li><a href="contact.html" class="block">Contact</a></li>
+          <li>
+            <a
+              href="index.html"
+              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="academics.html"
+              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
+              >Academics</a
+            >
+          </li>
+          <li>
+            <a
+              href="admissions.html"
+              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a
+              href="gallery.html"
+              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
+              >Gallery</a
+            >
+          </li>
+          <li>
+            <a
+              href="contact.html"
+              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
     </header>
@@ -89,29 +151,24 @@
       class="relative bg-green-50 h-screen bg-cover bg-center flex items-center"
       style="background-image: url(&quot;intro-image.jpg&quot;)"
     >
-      <!-- Overlay for better text visibility -->
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>
 
-      <!-- Text Content -->
       <div class="relative max-w-4xl mx-auto px-4 text-center">
         <h2
-          class="text-4xl md:text-5xl font-bold text-white mb-4 transform translate-x-[-100%] opacity-0 animate-slide-in"
+          class="text-4xl md:text-5xl font-bold text-white mb-4 animate-slideIn"
         >
           Dabs Dynamic International Schools
         </h2>
         <h1
-          class="text-xl md:text-2xl font-semibold text-white mb-4 transform translate-x-[100%] opacity-0 animate-slide-in-delay"
+          class="text-xl md:text-2xl font-semibold text-white mb-4 animate-slideInDelay"
         >
           Knowledge Cum Discipline
         </h1>
-        <p
-          class="max-w-3xl mx-auto text-lg text-white mb-8 transform translate-y-[50px] opacity-0 animate-slide-up"
-        >
+        <p class="max-w-3xl mx-auto text-lg text-white mb-8 animate-slideUp">
           Welcome to Dabs Dynamic International Schools — where academic
           excellence, discipline, and Godly values shape future leaders.
         </p>
-        <!-- Buttons -->
-        <div class="flex justify-center gap-4 opacity-0 animate-fade-in">
+        <div class="flex justify-center gap-4 animate-fadeIn">
           <a
             href="admissions.html"
             class="bg-green-700 text-white px-6 py-3 rounded-lg hover:bg-green-800 transition"
@@ -127,66 +184,6 @@
         </div>
       </div>
     </section>
-    <style>
-      @keyframes slide-in {
-        to {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-      @keyframes slide-in-delay {
-        0% {
-          transform: translateX(100%);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(0);
-          opacity: 1;
-        }
-      }
-      @keyframes slide-up {
-        0% {
-          transform: translateY(50px);
-          opacity: 0;
-        }
-        100% {
-          transform: translateY(0);
-          opacity: 1;
-        }
-      }
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      .animate-fade-in {
-        animation: fadeIn 1.5s forwards;
-        animation-delay: 1s; /* Optional: delay before buttons appear */
-      }
-
-      .animate-slide-in {
-        animation: slide-in 1s forwards;
-      }
-      .animate-slide-in-delay {
-        animation: slide-in-delay 1s 0.5s forwards;
-      }
-      .animate-slide-up {
-        animation: slide-up 1s 1s forwards;
-      }
-    </style>
-
-    <!-- SCRIPT FOR SLIDE-IN ANIMATION -->
-    <script>
-      window.addEventListener("load", () => {
-        const text = document.getElementById("introText");
-        text.classList.remove("-translate-x-full", "opacity-0");
-        text.classList.add("translate-x-0", "opacity-100");
-      });
-    </script>
 
     <!-- ABOUT SNAPSHOT -->
     <section class="py-16">
@@ -234,13 +231,71 @@
       </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-green-900 text-white py-6">
-      <div class="max-w-6xl mx-auto px-4 text-center">
-        <p class="mb-2 font-semibold">Dabs Dynamic International School</p>
-        <p class="text-sm">Knowledge Cum Discipline © 2006</p>
+    <!-- PRE-FOOTER / INFO SECTION -->
+<section class="bg-green-50 text-green-900 py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <!-- Top message with logo -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <img src="dabs-logo.png" alt="Dabs Logo" class="h-12 w-12 object-contain" />
+        <div>
+          <span class="font-bold text-lg">Dabs Dynamic Int’l Schools</span>
+          <span class="block text-sm font-medium">GOVT. APPROVED • RC NO: 2435402</span>
+        </div>
       </div>
-    </footer>
+
+      <!-- Tagline / Center Message -->
+      <p class="text-center md:text-left font-medium">
+        Bring your child/ren to us to LEARN, GROW, and EXCEL!
+      </p>
+    </div>
+
+    <!-- Info Columns -->
+    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+      <!-- Contact -->
+      <div>
+        <h4 class="font-bold mb-4">Contact</h4>
+        <p class="mb-2">📞 +234-XXX-XXX-XXXX</p>
+        <p class="mb-2">✉ info@dabsintlschools.com</p>
+        <p>📍 Plot 30, Some Street, City, State</p>
+      </div>
+
+      <!-- Social Media -->
+      <div>
+        <h4 class="font-bold mb-4">Connect with us</h4>
+        <div class="flex justify-center md:justify-start gap-4">
+          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">F</a>
+          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">T</a>
+          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">Y</a>
+          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">TG</a>
+        </div>
+      </div>
+
+      <!-- School Hours -->
+      <div>
+        <h4 class="font-bold mb-4">School Hours</h4>
+        <ul>
+          <li class="mb-1">Mon – Tue: 7:00 am – 4:00 pm</li>
+          <li class="mb-1">Wed – Thu: 7:00 am – 4:00 pm</li>
+          <li class="mb-1">Fri: 7:00 am – 4:00 pm</li>
+          <li>Sat – Sun: Closed</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-green-900 text-white py-6">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <p class="mb-2 font-semibold">Dabs Dynamic International Schools</p>
+    <p class="text-sm">Knowledge Cum Discipline © 2006</p>
+  </div>
+</footer>
+
+
+    <!-- MOBILE MENU SCRIPT -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const menuBtn = document.getElementById("menuBtn");
@@ -248,15 +303,29 @@
 
         menuBtn.addEventListener("click", () => {
           mobileMenu.classList.toggle("hidden");
+          menuBtn.classList.toggle("open");
         });
 
-        // Close menu when any link is clicked
         mobileMenu.querySelectorAll("a").forEach((link) => {
           link.addEventListener("click", () => {
             mobileMenu.classList.add("hidden");
+            menuBtn.classList.remove("open");
           });
         });
       });
     </script>
+
+    <style>
+      /* Hamburger → X animation */
+      #menuBtn.open .bar:nth-child(1) {
+        transform: rotate(45deg) translate(1px, 1px);
+      }
+      #menuBtn.open .bar:nth-child(2) {
+        opacity: 0;
+      }
+      #menuBtn.open .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(1px, -1px);
+      }
+    </style>
   </body>
 </html>
