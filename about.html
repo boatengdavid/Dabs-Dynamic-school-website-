@@ -1,33 +1,70 @@
 <!doctype html>
-<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us | Dabs Dynamic International Schools</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              slideIn: {
+                "0%": { transform: "translateX(-100%)", opacity: 0 },
+                "100%": { transform: "translateX(0)", opacity: 1 },
+              },
+              slideInDelay: {
+                "0%": { transform: "translateX(100%)", opacity: 0 },
+                "100%": { transform: "translateX(0)", opacity: 1 },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(50px)", opacity: 0 },
+                "100%": { transform: "translateY(0)", opacity: 1 },
+              },
+              fadeIn: {
+                "0%": { opacity: 0 },
+                "100%": { opacity: 1 },
+              },
+            },
+            animation: {
+              slideIn: "slideIn 1s forwards",
+              slideInDelay: "slideInDelay 1s 0.5s forwards",
+              slideUp: "slideUp 1s 1s forwards",
+              fadeIn: "fadeIn 1.5s 1s forwards",
+            },
+          },
+        },
+      };
+
+</script>
   </head>
   <body class="font-sans text-gray-800">
     <!-- NAVBAR -->
     <header class="bg-green-100">
       <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+
+
+        <!-- Logo -->
         <div class="flex items-center gap-3">
-  <img
-    src="dabs-logo.png"
-    alt="Dabs Dynamic International Schools Logo"
-    class="h-16 w-16 object-contain"
-  />
+          <img
+            src="dabs-logo.png"
+            alt="Dabs Dynamic International Schools Logo"
+            class="h-16 w-16 object-contain"
+          />
+          <div class="leading-tight">
+            <span class="block text-lg font-bold text-green-900">
+              Dabs Dynamic Int’l Schools
+            </span>
+            <span class="block text-xs font-medium text-green-700">
+              GOVT. APPROVED • RC NO: 2435402
+            </span>
+          </div>
 
-  <div class="leading-tight">
-    <span class="block text-lg font-bold text-green-900">
-      Dabs Dynamic Int’l Schools
-    </span>
-    <span class="block text-xs font-medium text-green-700">
-      GOVT. APPROVED • RC NO: 2435402
-    </span>
-  </div>
-</div>
+        </div>
 
+
+        <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-6 font-medium">
           <li><a href="index.html" class="hover:text-green-700">Home</a></li>
           <li><a href="about.html" class="hover:text-green-700">About</a></li>
@@ -46,20 +83,26 @@
             <a href="contact.html" class="hover:text-green-700">Contact</a>
           </li>
         </ul>
-        <button id="menuBtn" class="md:hidden text-green-900 text-2xl">
-          ☰
+
+        <!-- Mobile Menu Button -->
+
+        <button
+          id="menuBtn"
+          class="md:hidden relative w-7 h-7 flex items-center justify-center focus:outline-none"
+        >
+          <span
+            class="bar absolute w-6 h-0.5 bg-green-900 transition-all duration-300"
+          ></span>
+          <span
+            class="bar absolute w-6 h-0.5 bg-green-900 transition-all duration-300"
+          ></span>
+          <span
+            class="bar absolute w-6 h-0.5 bg-green-900 transition-all duration-300"
+
+
+            ></span>
         </button>
       </nav>
-      <div id="mobileMenu" class="hidden md:hidden bg-green-50 px-4 pb-4">
-        <ul class="space-y-3 font-medium">
-          <li><a href="index.html" class="block">Home</a></li>
-          <li><a href="about.html" class="block">About</a></li>
-          <li><a href="academics.html" class="block">Academics</a></li>
-          <li><a href="admissions.html" class="block">Admissions</a></li>
-          <li><a href="gallery.html" class="block">Gallery</a></li>
-          <li><a href="contact.html" class="block">Contact</a></li>
-        </ul>
-      </div>
     </header>
 
     <!-- ABOUT US PAGE -->
@@ -205,34 +248,103 @@
     </section>
 
    <!-- FOOTER -->
-  <footer class="bg-green-900 text-white py-6">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p class="mb-2 font-semibold">
-        Dabs Dynamic International School
-      </p>
-      <p class="text-sm">
-        Knowledge Cum Discipline © 2006
-      </p>
-    </div>
-  </footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    <footer class="bg-green-900 text-white py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="mb-2 font-semibold">Dabs Dynamic International Schools</p>
+        <p class="text-sm">Knowledge Cum Discipline © 2006</p>
+      </div>
+    </footer>
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menuBtn");
+        const closeMenu = document.getElementById("closeMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const overlay = document.getElementById("overlay");
 
-    // Close menu when any link is clicked
-    mobileMenu.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
+        function openMenu() {
+          mobileMenu.classList.remove("translate-x-full");
+          overlay.classList.remove("hidden");
+          menuBtn.classList.add("open");
+        }
+
+        function closeSidebar() {
+          mobileMenu.classList.add("translate-x-full");
+          overlay.classList.add("hidden");
+          menuBtn.classList.remove("open");
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        closeMenu.addEventListener("click", closeSidebar);
+        overlay.addEventListener("click", closeSidebar);
+
+        mobileMenu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeSidebar);
+        });
       });
-    });
-  });
-</script>
+    </script>
 
-</body>
+    <style>
+      /* Position bars properly */
+      #menuBtn .bar:nth-child(1) {
+        top: 8px;
+      }
+      #menuBtn .bar:nth-child(2) {
+        top: 13px;
+      }
+      #menuBtn .bar:nth-child(3) {
+        top: 18px;
+      }
+
+      /* Animate to X */
+      #menuBtn.open .bar:nth-child(1) {
+        transform: rotate(45deg);
+        top: 13px;
+      }
+
+      #menuBtn.open .bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      #menuBtn.open .bar:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 13px;
+      }
+    </style>
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 transition-opacity duration-300"
+    ></div>
+
+    <!-- Sidebar Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50"
+    >
+      <!-- Header -->
+      <div
+        class="flex items-center justify-between px-5 py-4 border-b bg-green-100"
+      >
+        <span class="font-bold text-green-900"> Menu </span>
+
+        <button
+          id="closeMenu"
+          class="w-8 h-8 flex items-center justify-center bg-green-700 text-white rounded-full hover:bg-green-800 transition"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Links -->
+      <nav class="px-6 py-6 space-y-6 font-medium text-gray-700">
+        <a href="index.html" class="block border-b pb-3">Home</a>
+        <a href="about.html" class="block border-b pb-3">About</a>
+        <a href="academics.html" class="block border-b pb-3">Academics</a>
+        <a href="admissions.html" class="block border-b pb-3">Admissions</a>
+        <a href="gallery.html" class="block border-b pb-3">Gallery</a>
+        <a href="contact.html" class="block border-b pb-3">Contact</a>
+      </nav>
+    </div>
+  </body>
 </html>
-

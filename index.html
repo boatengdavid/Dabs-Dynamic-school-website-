@@ -83,67 +83,19 @@
 
         <button
           id="menuBtn"
-          class="md:hidden flex flex-col gap-1 w-5 h-5 relative focus:outline-none"
+          class="md:hidden relative w-7 h-7 flex items-center justify-center focus:outline-none"
         >
           <span
-            class="bar block h-0.5 w-full bg-green-900 rounded transition-all duration-300"
+            class="bar absolute w-6 h-0.5 bg-green-900 transition-all duration-300"
           ></span>
           <span
-            class="bar block h-0.5 w-full bg-green-900 rounded transition-all duration-300"
+            class="bar absolute w-6 h-0.5 bg-green-900 transition-all duration-300"
           ></span>
           <span
-            class="bar block h-0.5 w-full bg-green-900 rounded transition-all duration-300"
+            class="bar absolute w-6 h-0.5 bg-green-900 transition-all duration-300"
           ></span>
         </button>
       </nav>
-
-      <!-- Mobile Menu -->
-      <div id="mobileMenu" class="hidden md:hidden bg-green-50 px-4 pb-4">
-        <ul class="space-y-3 font-medium">
-          <li>
-            <a
-              href="index.html"
-              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
-              >Home</a
-            >
-          </li>
-          <li>
-            <a
-              href="about.html"
-              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
-              >About</a
-            >
-          </li>
-          <li>
-            <a
-              href="academics.html"
-              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
-              >Academics</a
-            >
-          </li>
-          <li>
-            <a
-              href="admissions.html"
-              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
-              >Admissions</a
-            >
-          </li>
-          <li>
-            <a
-              href="gallery.html"
-              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
-              >Gallery</a
-            >
-          </li>
-          <li>
-            <a
-              href="contact.html"
-              class="block bg-white rounded-lg px-4 py-3 shadow hover:bg-green-100 transition"
-              >Contact</a
-            >
-          </li>
-        </ul>
-      </div>
     </header>
 
     <!-- INTRO SECTION -->
@@ -232,100 +184,182 @@
     </section>
 
     <!-- PRE-FOOTER / INFO SECTION -->
-<section class="bg-green-50 text-green-900 py-12">
-  <div class="max-w-7xl mx-auto px-4">
-    <!-- Top message with logo -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-      <!-- Logo -->
-      <div class="flex items-center gap-3">
-        <img src="dabs-logo.png" alt="Dabs Logo" class="h-12 w-12 object-contain" />
-        <div>
-          <span class="font-bold text-lg">Dabs Dynamic Int’l Schools</span>
-          <span class="block text-sm font-medium">GOVT. APPROVED • RC NO: 2435402</span>
+    <section class="bg-green-50 text-green-900 py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <!-- Top message with logo -->
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8"
+        >
+          <!-- Logo -->
+          <div class="flex items-center gap-3">
+            <img
+              src="dabs-logo.png"
+              alt="Dabs Logo"
+              class="h-12 w-12 object-contain"
+            />
+            <div>
+              <span class="font-bold text-lg">Dabs Dynamic Int’l Schools</span>
+              <span class="block text-sm font-medium"
+                >GOVT. APPROVED • RC NO: 2435402</span
+              >
+            </div>
+          </div>
+
+          <!-- Tagline / Center Message -->
+          <p class="text-center md:text-left font-medium">
+            Bring your child/ren to us to LEARN, GROW, and EXCEL!
+          </p>
+        </div>
+
+        <!-- Info Columns -->
+        <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+          <!-- Contact -->
+          <div>
+            <h4 class="font-bold mb-4">Contact</h4>
+            <p class="mb-2">📞 +234-XXX-XXX-XXXX</p>
+            <p class="mb-2">✉ info@dabsintlschools.com</p>
+            <p>📍 Plot 30, Some Street, City, State</p>
+          </div>
+
+          <!-- Social Media -->
+          <div>
+            <h4 class="font-bold mb-4">Connect with us</h4>
+            <div class="flex justify-center md:justify-start gap-4">
+              <a
+                href="#"
+                class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition"
+                >F</a
+              >
+              <a
+                href="#"
+                class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition"
+                >T</a
+              >
+              <a
+                href="#"
+                class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition"
+                >Y</a
+              >
+              <a
+                href="#"
+                class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition"
+                >TG</a
+              >
+            </div>
+          </div>
+
+          <!-- School Hours -->
+          <div>
+            <h4 class="font-bold mb-4">School Hours</h4>
+            <ul>
+              <li class="mb-1">Mon – Tue: 7:00 am – 4:00 pm</li>
+              <li class="mb-1">Wed – Thu: 7:00 am – 4:00 pm</li>
+              <li class="mb-1">Fri: 7:00 am – 4:00 pm</li>
+              <li>Sat – Sun: Closed</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Tagline / Center Message -->
-      <p class="text-center md:text-left font-medium">
-        Bring your child/ren to us to LEARN, GROW, and EXCEL!
-      </p>
-    </div>
-
-    <!-- Info Columns -->
-    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-      <!-- Contact -->
-      <div>
-        <h4 class="font-bold mb-4">Contact</h4>
-        <p class="mb-2">📞 +234-XXX-XXX-XXXX</p>
-        <p class="mb-2">✉ info@dabsintlschools.com</p>
-        <p>📍 Plot 30, Some Street, City, State</p>
+    <!-- FOOTER -->
+    <footer class="bg-green-900 text-white py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="mb-2 font-semibold">Dabs Dynamic International Schools</p>
+        <p class="text-sm">Knowledge Cum Discipline © 2006</p>
       </div>
+    </footer>
 
-      <!-- Social Media -->
-      <div>
-        <h4 class="font-bold mb-4">Connect with us</h4>
-        <div class="flex justify-center md:justify-start gap-4">
-          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">F</a>
-          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">T</a>
-          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">Y</a>
-          <a href="#" class="bg-green-900 text-white p-2 rounded-full hover:bg-green-700 transition">TG</a>
-        </div>
-      </div>
-
-      <!-- School Hours -->
-      <div>
-        <h4 class="font-bold mb-4">School Hours</h4>
-        <ul>
-          <li class="mb-1">Mon – Tue: 7:00 am – 4:00 pm</li>
-          <li class="mb-1">Wed – Thu: 7:00 am – 4:00 pm</li>
-          <li class="mb-1">Fri: 7:00 am – 4:00 pm</li>
-          <li>Sat – Sun: Closed</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-green-900 text-white py-6">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <p class="mb-2 font-semibold">Dabs Dynamic International Schools</p>
-    <p class="text-sm">Knowledge Cum Discipline © 2006</p>
-  </div>
-</footer>
-
-
-    <!-- MOBILE MENU SCRIPT -->
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const menuBtn = document.getElementById("menuBtn");
+        const closeMenu = document.getElementById("closeMenu");
         const mobileMenu = document.getElementById("mobileMenu");
+        const overlay = document.getElementById("overlay");
 
-        menuBtn.addEventListener("click", () => {
-          mobileMenu.classList.toggle("hidden");
-          menuBtn.classList.toggle("open");
-        });
+        function openMenu() {
+          mobileMenu.classList.remove("translate-x-full");
+          overlay.classList.remove("hidden");
+          menuBtn.classList.add("open");
+        }
+
+        function closeSidebar() {
+          mobileMenu.classList.add("translate-x-full");
+          overlay.classList.add("hidden");
+          menuBtn.classList.remove("open");
+        }
+
+        menuBtn.addEventListener("click", openMenu);
+        closeMenu.addEventListener("click", closeSidebar);
+        overlay.addEventListener("click", closeSidebar);
 
         mobileMenu.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", () => {
-            mobileMenu.classList.add("hidden");
-            menuBtn.classList.remove("open");
-          });
+          link.addEventListener("click", closeSidebar);
         });
       });
     </script>
 
     <style>
-      /* Hamburger → X animation */
-      #menuBtn.open .bar:nth-child(1) {
-        transform: rotate(45deg) translate(1px, 1px);
+      /* Position bars properly */
+      #menuBtn .bar:nth-child(1) {
+        top: 8px;
       }
+      #menuBtn .bar:nth-child(2) {
+        top: 13px;
+      }
+      #menuBtn .bar:nth-child(3) {
+        top: 18px;
+      }
+
+      /* Animate to X */
+      #menuBtn.open .bar:nth-child(1) {
+        transform: rotate(45deg);
+        top: 13px;
+      }
+
       #menuBtn.open .bar:nth-child(2) {
         opacity: 0;
       }
+
       #menuBtn.open .bar:nth-child(3) {
-        transform: rotate(-45deg) translate(1px, -1px);
+        transform: rotate(-45deg);
+        top: 13px;
       }
     </style>
+    <!-- Overlay -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-40 transition-opacity duration-300"
+    ></div>
+
+    <!-- Sidebar Menu -->
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50"
+    >
+      <!-- Header -->
+      <div
+        class="flex items-center justify-between px-5 py-4 border-b bg-green-100"
+      >
+        <span class="font-bold text-green-900"> Menu </span>
+
+        <button
+          id="closeMenu"
+          class="w-8 h-8 flex items-center justify-center bg-green-700 text-white rounded-full hover:bg-green-800 transition"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- Links -->
+      <nav class="px-6 py-6 space-y-6 font-medium text-gray-700">
+        <a href="index.html" class="block border-b pb-3">Home</a>
+        <a href="about.html" class="block border-b pb-3">About</a>
+        <a href="academics.html" class="block border-b pb-3">Academics</a>
+        <a href="admissions.html" class="block border-b pb-3">Admissions</a>
+        <a href="gallery.html" class="block border-b pb-3">Gallery</a>
+        <a href="contact.html" class="block border-b pb-3">Contact</a>
+      </nav>
+    </div>
   </body>
 </html>
