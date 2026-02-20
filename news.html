@@ -1,176 +1,336 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News | Dabs Dynamic International Schools</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News | Dabs Dynamic International Schools</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta
+      name="description"
+      content="Stay updated with the latest news, events, and achievements from Dabs Dynamic International Schools."
+    />
+    <meta
+      name="keywords"
+      content="Dabs School News, School Events, Education Updates Nigeria"
+    />
+    <meta
+      property="og:title"
+      content="News | Dabs Dynamic International Schools"
+    />
+    <meta
+      property="og:description"
+      content="Latest happenings and announcements from Dabs Dynamic International Schools."
+    />
+    <meta property="og:type" content="website" />
+  </head>
 
-<body class="font-sans text-gray-800">
+  <body class="font-sans text-gray-800">
+    <!-- ================= HEADER ================= -->
+    <header class="bg-green-100">
+      <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img src="dabs-logo.png" class="h-16 w-16 object-contain" />
+          <div class="leading-tight">
+            <span class="block text-lg font-bold text-green-900">
+              Dabs Dynamic Int’l Schools
+            </span>
+            <span class="block text-xs font-medium text-green-700">
+              GOVT. APPROVED • RC NO: 2435402
+            </span>
+          </div>
+        </div>
 
-  <!-- ================= HEADER ================= -->
-  <header class="bg-green-100">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+        <!-- Desktop Menu -->
+        <ul class="hidden md:flex space-x-6 font-medium">
+          <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+          <li><a href="news.html" class="hover:text-green-700">News</a></li>
+          <li><a href="about.html" class="hover:text-green-700">About</a></li>
+          <li>
+            <a href="academics.html" class="hover:text-green-700">Academics</a>
+          </li>
+          <li>
+            <a href="admissions.html" class="hover:text-green-700"
+              >Admissions</a
+            >
+          </li>
+          <li>
+            <a href="gallery.html" class="hover:text-green-700">Gallery</a>
+          </li>
+          <li>
+            <a href="contact.html" class="hover:text-green-700">Contact</a>
+          </li>
+        </ul>
 
-      <!-- Logo -->
-      <div class="flex items-center gap-3">
-        <img src="dabs-logo.png" class="h-16 w-16 object-contain" />
-        <div class="leading-tight">
-          <span class="block text-lg font-bold text-green-900">
-            Dabs Dynamic Int’l Schools
-          </span>
-          <span class="block text-xs font-medium text-green-700">
-            GOVT. APPROVED • RC NO: 2435402
-          </span>
+        <!-- Mobile Hamburger -->
+        <button
+          id="menuBtn"
+          class="md:hidden flex flex-col justify-center gap-1 w-5 h-5"
+        >
+          <span class="h-[1.5px] w-full bg-green-900 rounded"></span>
+          <span class="h-[1.5px] w-full bg-green-900 rounded"></span>
+          <span class="h-[1.5px] w-full bg-green-900 rounded"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- ================= PAGE TITLE ================= -->
+    <section
+      class="relative bg-green-900 text-white py-24 text-center overflow-hidden"
+    >
+      <div
+        class="absolute inset-0 opacity-10 bg-[url('intro-image.jpg')] bg-cover bg-center"
+      ></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+          News & Updates
+        </h1>
+
+        <p class="text-lg md:text-xl text-green-100">
+          Discover the latest events, achievements, and important announcements
+          from Dabs Dynamic International Schools.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= NEWS GRID ================= -->
+    <section class="py-24 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-10">
+        <!-- Card -->
+        <div
+          class="news-item bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 overflow-hidden"
+          data-date="2026-03-10"
+          data-title="Inter-House Sports Competition"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="news1.jpg"
+              alt="Inter-House Sports Competition"
+              class="w-full h-52 object-cover transition-transform duration-500 hover:scale-110"
+            />
+          </div>
+
+          <div class="p-6">
+            <span
+              class="text-xs uppercase tracking-wider text-green-600 font-semibold"
+            >
+              March 10, 2026
+            </span>
+
+            <h3 class="text-xl font-bold mt-3 mb-3 text-gray-900">
+              Inter-House Sports Competition
+            </h3>
+
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Our annual sports competition showcased excellence, teamwork, and
+              school spirit among students.
+            </p>
+
+            <a
+              href="#"
+              class="inline-block mt-5 text-green-700 font-semibold hover:text-green-900 transition"
+            >
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div
+          class="news-item bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+          data-date="2026-02-12"
+          data-title="ICT Training Workshop"
+        >
+          <img src="news2.jpg" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <span class="text-sm text-green-600 font-semibold"
+              >February 2026</span
+            >
+            <h3 class="text-xl font-bold mt-2 mb-3">ICT Training Workshop</h3>
+            <p class="text-gray-600 text-sm">
+              Students participated in a hands-on ICT workshop focused on
+              digital innovation.
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-4 text-green-700 font-semibold hover:underline"
+            >
+              Read More →
+            </a>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div
+          class="news-item bg-white rounded-2xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+          data-date="2026-01-20"
+          data-title="Graduation Ceremony"
+        >
+          <img src="news3.jpg" class="w-full h-48 object-cover" />
+          <div class="p-6">
+            <span class="text-sm text-green-600 font-semibold"
+              >January 2026</span
+            >
+            <h3 class="text-xl font-bold mt-2 mb-3">Graduation Ceremony</h3>
+            <p class="text-gray-600 text-sm">
+              Celebrating our graduating students as they move into the next
+              stage of life.
+            </p>
+            <a
+              href="#"
+              class="inline-block mt-4 text-green-700 font-semibold hover:underline"
+            >
+              Read More →
+            </a>
+          </div>
         </div>
       </div>
+    </section>
+    <!-- ================= SCHOOL STATS ================= -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h3 class="text-3xl md:text-4xl font-bold mb-16 text-gray-900">
+          Our Impact in Numbers
+        </h3>
 
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6 font-medium">
-        <li><a href="index.html" class="hover:text-green-700">Home</a></li>
-        <li><a href="news.html" class="text-green-900 font-bold">News</a></li>
-        <li><a href="about.html" class="hover:text-green-700">About</a></li>
-        <li><a href="academics.html" class="hover:text-green-700">Academics</a></li>
-        <li><a href="admissions.html" class="hover:text-green-700">Admissions</a></li>
-        <li><a href="gallery.html" class="hover:text-green-700">Gallery</a></li>
-        <li><a href="contact.html" class="hover:text-green-700">Contact</a></li>
-      </ul>
+        <div class="grid md:grid-cols-4 gap-12">
+          <div>
+            <h4 class="text-4xl font-bold text-green-700 mb-2">20+</h4>
+            <p class="text-gray-600">Years of Excellence</p>
+          </div>
 
-      <!-- Mobile Hamburger -->
-      <button
-        id="menuBtn"
-        class="md:hidden flex flex-col justify-center gap-1 w-5 h-5"
+          <div>
+            <h4 class="text-4xl font-bold text-green-700 mb-2">1,000+</h4>
+            <p class="text-gray-600">Students Enrolled</p>
+          </div>
+
+          <div>
+            <h4 class="text-4xl font-bold text-green-700 mb-2">100%</h4>
+            <p class="text-gray-600">Examination Success</p>
+          </div>
+
+          <div>
+            <h4 class="text-4xl font-bold text-green-700 mb-2">50+</h4>
+            <p class="text-gray-600">Qualified Teachers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================= ADMISSION CTA ================= -->
+    <section class="bg-green-900 text-white py-24 text-center">
+      <div class="max-w-4xl mx-auto px-6">
+        <h3 class="text-3xl md:text-4xl font-bold mb-6">
+          Admissions Open for 2026 Academic Session
+        </h3>
+
+        <p class="text-lg text-green-100 mb-10">
+          Give your child the advantage of a disciplined, value-driven, and
+          globally competitive education.
+        </p>
+
+        <a
+          href="admissions.html"
+          class="bg-white text-green-900 font-semibold px-8 py-4 rounded-full hover:bg-green-100 transition duration-300"
+        >
+          Apply Now
+        </a>
+      </div>
+    </section>
+
+    
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-green-900 text-white py-6">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-sm text-green-200">
+          Knowledge Cum Discipline © 2006 – 2026 | All Rights Reserved
+        </p>
+      </div>
+    </footer>
+
+    <!-- ================= OVERLAY ================= -->
+    <div
+      id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"
+    ></div>
+
+    <!-- ================= SIDEBAR ================= -->
+    <div
+      id="mobileMenu"
+      class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50"
+    >
+      <div
+        class="flex items-center justify-between px-5 py-4 border-b bg-green-100"
       >
-        <span class="h-[1.5px] w-full bg-green-900 rounded"></span>
-        <span class="h-[1.5px] w-full bg-green-900 rounded"></span>
-        <span class="h-[1.5px] w-full bg-green-900 rounded"></span>
-      </button>
-
-    </nav>
-  </header>
-
-  <!-- ================= PAGE TITLE ================= -->
-  <section class="bg-green-50 py-16 text-center">
-    <h1 class="text-4xl font-bold text-green-900 mb-4">
-      School News & Updates
-    </h1>
-    <p class="max-w-2xl mx-auto">
-      Stay informed about the latest happenings, achievements, and announcements at
-      <span class="font-bold">Dabs Dynamic International Schools</span>.
-    </p>
-  </section>
-
-  <!-- ================= NEWS GRID ================= -->
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-
-      <!-- Card -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-        <img src="news1.jpg" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <span class="text-sm text-green-600 font-semibold">March 2026</span>
-          <h3 class="text-xl font-bold mt-2 mb-3">Inter-House Sports Competition</h3>
-          <p class="text-gray-600 text-sm">
-            Our annual sports competition showcased excellence, teamwork and school spirit.
-          </p>
-        </div>
+        <span class="font-bold text-green-900">Menu</span>
+        <button
+          id="closeMenu"
+          class="w-8 h-8 flex items-center justify-center bg-green-700 text-white rounded-full"
+        >
+          ✕
+        </button>
       </div>
 
-      <!-- Card -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-        <img src="news2.jpg" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <span class="text-sm text-green-600 font-semibold">February 2026</span>
-          <h3 class="text-xl font-bold mt-2 mb-3">ICT Training Workshop</h3>
-          <p class="text-gray-600 text-sm">
-            Students participated in a hands-on ICT workshop focused on digital innovation.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-        <img src="news3.jpg" class="w-full h-48 object-cover" />
-        <div class="p-6">
-          <span class="text-sm text-green-600 font-semibold">January 2026</span>
-          <h3 class="text-xl font-bold mt-2 mb-3">Graduation Ceremony</h3>
-          <p class="text-gray-600 text-sm">
-            Celebrating our graduating students as they move into the next stage of life.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= PRE-FOOTER ================= -->
-  <section class="bg-green-50 text-green-900 py-12">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p class="font-medium">
-        Bring your child/ren to us to LEARN, GROW, and EXCEL!
-      </p>
-    </div>
-  </section>
-
-  <!-- ================= FOOTER ================= -->
-  <footer class="bg-green-900 text-white py-6">
-    <div class="max-w-7xl mx-auto px-4 text-center">
-      <p class="mb-2 font-semibold">Dabs Dynamic International Schools</p>
-      <p class="text-sm">Knowledge Cum Discipline © 2006</p>
-    </div>
-  </footer>
-
-  <!-- ================= OVERLAY ================= -->
-  <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
-
-  <!-- ================= SIDEBAR ================= -->
-  <div id="mobileMenu"
-       class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 z-50">
-
-    <div class="flex items-center justify-between px-5 py-4 border-b bg-green-100">
-      <span class="font-bold text-green-900">Menu</span>
-      <button id="closeMenu"
-              class="w-8 h-8 flex items-center justify-center bg-green-700 text-white rounded-full">
-        ✕
-      </button>
+      <nav class="px-6 py-6 space-y-6 font-medium text-gray-700">
+        <a href="index.html" class="block border-b pb-3">Home</a>
+        <a href="news.html" class="block border-b pb-3 font-bold text-green-900"
+          >News</a
+        >
+        <a href="about.html" class="block border-b pb-3">About</a>
+        <a href="academics.html" class="block border-b pb-3">Academics</a>
+        <a href="admissions.html" class="block border-b pb-3">Admissions</a>
+        <a href="gallery.html" class="block border-b pb-3">Gallery</a>
+        <a href="contact.html" class="block border-b pb-3">Contact</a>
+      </nav>
     </div>
 
-    <nav class="px-6 py-6 space-y-6 font-medium text-gray-700">
-      <a href="index.html" class="block border-b pb-3">Home</a>
-      <a href="news.html" class="block border-b pb-3 font-bold text-green-900">News</a>
-      <a href="about.html" class="block border-b pb-3">About</a>
-      <a href="academics.html" class="block border-b pb-3">Academics</a>
-      <a href="admissions.html" class="block border-b pb-3">Admissions</a>
-      <a href="gallery.html" class="block border-b pb-3">Gallery</a>
-      <a href="contact.html" class="block border-b pb-3">Contact</a>
-    </nav>
+    <!-- ================= SCRIPT ================= -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const menuBtn = document.getElementById("menuBtn");
+        const closeMenu = document.getElementById("closeMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const overlay = document.getElementById("overlay");
 
-  </div>
+        function openMenu() {
+          mobileMenu.classList.remove("translate-x-full");
+          overlay.classList.remove("hidden");
+        }
 
-  <!-- ================= SCRIPT ================= -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuBtn = document.getElementById("menuBtn");
-      const closeMenu = document.getElementById("closeMenu");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const overlay = document.getElementById("overlay");
+        function closeSidebar() {
+          mobileMenu.classList.add("translate-x-full");
+          overlay.classList.add("hidden");
+        }
 
-      function openMenu() {
-        mobileMenu.classList.remove("translate-x-full");
-        overlay.classList.remove("hidden");
-      }
+        menuBtn.addEventListener("click", openMenu);
+        closeMenu.addEventListener("click", closeSidebar);
+        overlay.addEventListener("click", closeSidebar);
+      });
+    </script>
+    <script>
+      const cards = document.querySelectorAll(".news-item");
 
-      function closeSidebar() {
-        mobileMenu.classList.add("translate-x-full");
-        overlay.classList.add("hidden");
-      }
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("opacity-100", "translate-y-0");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
 
-      menuBtn.addEventListener("click", openMenu);
-      closeMenu.addEventListener("click", closeSidebar);
-      overlay.addEventListener("click", closeSidebar);
-    });
-  </script>
-
-</body>
+      cards.forEach((card) => {
+        card.classList.add(
+          "opacity-0",
+          "translate-y-6",
+          "transition-all",
+          "duration-700",
+        );
+        observer.observe(card);
+      });
+    </script>
+  </body>
 </html>
