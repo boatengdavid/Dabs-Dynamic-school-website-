@@ -393,28 +393,93 @@
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="bg-white py-20 border-t border-gray-100">
+    <!-- ================= SCHOOL STATISTICS (Light Theme) ================= -->
+    <section class="py-16 bg-gray-100 text-gray-800">
       <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
-          <div>
-            <h3 class="text-4xl font-bold text-green-800">20+</h3>
-            <p class="text-gray-600 mt-2">Years of Excellence</p>
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">Our Growth & Stability</h2>
+          <p class="text-gray-600">
+            Building a strong academic foundation since 2006.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-10 text-center">
+          <!-- Established -->
+          <div data-aos="fade-up" data-aos-delay="0">
+            <div class="flex justify-center mb-4">
+              <!-- Calendar Icon -->
+              <svg
+                class="w-10 h-10 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold counter" data-target="2006">0</h3>
+            <p class="text-gray-600 mt-2">Year Established</p>
           </div>
 
-          <div>
-            <h3 class="text-4xl font-bold text-green-800">1,500+</h3>
-            <p class="text-gray-600 mt-2">Graduated Students</p>
+          <!-- Years -->
+          <div data-aos="fade-up" data-aos-delay="150">
+            <div class="flex justify-center mb-4">
+              <!-- Clock Icon -->
+              <svg
+                class="w-10 h-10 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold counter" data-target="15">0</h3>
+            <p class="text-gray-600 mt-2">Years of Service</p>
           </div>
 
-          <div>
-            <h3 class="text-4xl font-bold text-green-800">50+</h3>
-            <p class="text-gray-600 mt-2">Qualified Teachers</p>
+          <!-- Staff -->
+          <div data-aos="fade-up" data-aos-delay="300">
+            <div class="flex justify-center mb-4">
+              <!-- Users Icon -->
+              <svg
+                class="w-10 h-10 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M7 21v-2a4 4 0 0 1 3-3.87" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold counter" data-target="50">0</h3>
+            <p class="text-gray-600 mt-2">Qualified Staff</p>
           </div>
 
-          <div>
-            <h3 class="text-4xl font-bold text-green-800">100%</h3>
-            <p class="text-gray-600 mt-2">Exam Success Rate</p>
+          <!-- Graduates -->
+          <div data-aos="fade-up" data-aos-delay="450">
+            <div class="flex justify-center mb-4">
+              <!-- Award Icon -->
+              <svg
+                class="w-10 h-10 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="8" r="7" />
+                <polyline points="8 21 12 17 16 21" />
+              </svg>
+            </div>
+            <h3 class="text-3xl font-bold counter" data-target="500">0</h3>
+            <p class="text-gray-600 mt-2">Graduates</p>
           </div>
         </div>
       </div>
@@ -740,6 +805,45 @@
 
         animated.forEach((el) => observer.observe(el));
       });
+    </script>
+    <script>
+      const counters = document.querySelectorAll(".counter");
+      const speed = 200; // lower = faster
+
+      const animateCounters = () => {
+        counters.forEach((counter) => {
+          const updateCount = () => {
+            const target = +counter.getAttribute("data-target");
+            const count = +counter.innerText;
+
+            const increment = target / speed;
+
+            if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCount, 20);
+            } else {
+              counter.innerText = target;
+            }
+          };
+
+          updateCount();
+        });
+      };
+
+      // Run when section is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateCounters();
+            observer.disconnect(); // run only once
+          }
+        });
+      });
+
+      const statsSection = document
+        .querySelector(".counter")
+        .closest("section");
+      observer.observe(statsSection);
     </script>
   </body>
 </html>

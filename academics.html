@@ -102,11 +102,17 @@
 
     <!-- ACADEMICS PAGE -->
     <section class="bg-green-50 py-16">
-      <div class="max-w-5xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-green-900 mb-6 text-center">
+      <img
+        src="hero-academics.jpg"
+        class="absolute inset-0 w-full h-full object-cover opacity-30"
+      />
+      <div class="relative z-10 max-w-5xl mx-auto text-center">
+        <h2
+          class="text-4xl md:text-5xl font-serif font-bold text-green-900 mb-6 text-center"
+        >
           Academics at Dabs Dynamic International Schools
         </h2>
-        <p class="mb-8 text-center">
+        <p class="text-gray-700 max-w-3xl mx-auto text-center mb-12">
           We offer a comprehensive educational experience from Creche to
           Secondary levels, blending academic excellence with moral values, ICT
           skills, sports, and extra-curricular activities.
@@ -114,35 +120,49 @@
 
         <!-- Academic Levels -->
         <div class="grid md:grid-cols-2 gap-8 mb-8">
-          <div class="bg-green-100 p-6 rounded-lg">
-            <h3 class="text-2xl font-semibold mb-4">Creche & Nursery</h3>
-            <p>
+          <div
+            class="bg-white border-l-4 border-green-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
+          >
+            <h3 class="text-2xl font-semibold text-green-900 mb-3">
+              Creche & Nursery
+            </h3>
+            <p class="text-gray-700">
               Early childhood education focused on basic literacy, numeracy,
               social skills, and moral training in a safe and stimulating
               environment.
             </p>
           </div>
-          <div class="bg-green-100 p-6 rounded-lg">
-            <h3 class="text-2xl font-semibold mb-4">Primary School</h3>
-            <p>
+          <div
+            class="bg-white border-l-4 border-green-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
+          >
+            <h3 class="text-2xl font-semibold text-green-900 mb-3">
+              Primary School
+            </h3>
+            <p class="text-gray-700">
               Comprehensive curriculum including English, Mathematics, Science,
               ICT, Moral Training, and Sports, preparing students for junior
               examinations and building foundational skills.
             </p>
           </div>
-          <div class="bg-green-100 p-6 rounded-lg">
-            <h3 class="text-2xl font-semibold mb-4">Secondary School</h3>
-            <p>
+          <div
+            class="bg-white border-l-4 border-green-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
+          >
+            <h3 class="text-2xl font-semibold text-green-900 mb-3">
+              Secondary School
+            </h3>
+            <p class="text-gray-700">
               Advanced academic programs, external exam preparation, leadership
               development, ICT integration, moral guidance, and sports for
               holistic growth.
             </p>
           </div>
-          <div class="bg-green-100 p-6 rounded-lg">
-            <h3 class="text-2xl font-semibold mb-4">
+          <div
+            class="bg-white border-l-4 border-green-700 p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2"
+          >
+            <h3 class="text-2xl font-semibold text-green-900 mb-3">
               Extra-Curricular Activities
             </h3>
-            <p>
+            <p class="text-gray-700">
               Sports, cultural activities, and clubs designed to develop social
               skills, teamwork, creativity, and personal discipline.
             </p>
@@ -154,12 +174,57 @@
           <h3 class="text-2xl font-semibold text-green-800 mb-4">
             Curriculum Highlights
           </h3>
-          <ul class="list-disc pl-6 space-y-2">
-            <li>ICT Integration in all levels</li>
-            <li>Moral and Ethical Education</li>
-            <li>Sports and Physical Development</li>
-            <li>Problem-solving and Critical Thinking</li>
-            <li>Career Guidance and Leadership Skills</li>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-6 h-6 text-green-700"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <span>ICT Integration in all levels</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-6 h-6 text-green-700"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Moral and Ethical Education</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-6 h-6 text-green-700"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Sports and Physical Development</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-6 h-6 text-green-700"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Problem-solving and Critical Thinking</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <svg
+                class="w-6 h-6 text-green-700"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M5 13l4 4L19 7" />
+              </svg>
+              <span>Career Guidance and Leadership Skills</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -181,7 +246,7 @@
 
           <a
             href="admissions.html"
-            class="inline-block bg-green-700 text-white px-10 py-4 rounded-lg font-semibold hover:bg-green-800 transition duration-300 shadow-md"
+            class="inline-block bg-gradient-to-r from-green-600 to-green-800 text-white px-12 py-4 rounded-xl font-semibold text-lg shadow-lg hover:scale-105 transition-transform duration-300"
           >
             Begin Admission Process
           </a>
