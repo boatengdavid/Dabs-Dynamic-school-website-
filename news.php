@@ -48,7 +48,7 @@ if ($result && $result->num_rows > 0) {
 
         <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-6 font-medium">
-          <li><a href="index.php" class="hover:text-green-700">Home</a></li>
+          <li><a href="home.php" class="hover:text-green-700">Home</a></li>
           <li><a href="news.php" class="hover:text-green-700 font-bold text-green-900">News</a></li>
           <li><a href="about.php" class="hover:text-green-700">About</a></li>
           <li><a href="academics.php" class="hover:text-green-700">Academics</a></li>
@@ -173,21 +173,7 @@ if ($result && $result->num_rows > 0) {
     <!-- ================= PRE FOOTER ================= -->
     <section class="bg-green-900 text-white py-6">
       <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center mb-20">
-          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-            Excellence. Discipline. Leadership.
-          </h2>
-          <p class="max-w-2xl mx-auto text-slate-400 mb-8">
-            Join a community dedicated to shaping confident, disciplined, and
-            globally competitive leaders.
-          </p>
-          <a
-            href="admissions.php"
-            class="inline-block bg-green-700 text-white px-10 py-4 rounded-lg font-semibold hover:bg-green-800 transition duration-300 shadow-md"
-          >
-            Begin Admission Process
-          </a>
-        </div>
+        
 
         <div class="border-t border-slate-700 mb-16"></div>
 
@@ -273,7 +259,7 @@ if ($result && $result->num_rows > 0) {
         <button id="closeMenu" class="w-8 h-8 flex items-center justify-center bg-green-700 text-white rounded-full">✕</button>
       </div>
       <nav class="px-6 py-6 space-y-6 font-medium text-gray-700">
-        <a href="index.php" class="block border-b pb-3">Home</a>
+        <a href="home.php" class="block border-b pb-3">Home</a>
         <a href="news.php" class="block border-b pb-3 font-bold text-green-900">News</a>
         <a href="about.php" class="block border-b pb-3">About</a>
         <a href="academics.php" class="block border-b pb-3">Academics</a>

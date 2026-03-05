@@ -62,7 +62,7 @@
 
         <!-- Desktop Menu -->
         <ul class="hidden md:flex space-x-6 font-medium">
-          <li><a href="index.php" class="hover:text-green-700">Home</a></li>
+          <li><a href="home.php" class="hover:text-green-700">Home</a></li>
           <li><a href="news.php" class="hover:text-green-700">News</a></li>
           <li><a href="about.php" class="hover:text-green-700">About</a></li>
           <li><a href="academics.php" class="hover:text-green-700 font-bold text-green-900">Academics</a></li>
@@ -608,7 +608,7 @@
         <button id="closeMenu" class="w-8 h-8 flex items-center justify-center bg-green-700 text-white rounded-full hover:bg-green-800 transition">✕</button>
       </div>
       <nav class="px-6 py-6 space-y-6 font-medium text-gray-700">
-        <a href="index.php" class="block border-b pb-3">Home</a>
+        <a href="home.php" class="block border-b pb-3">Home</a>
         <a href="news.php" class="block border-b pb-3">News</a>
         <a href="about.php" class="block border-b pb-3">About</a>
         <a href="academics.php" class="block border-b pb-3 font-bold text-green-900">Academics</a>
