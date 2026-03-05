@@ -23,6 +23,7 @@ $current = basename($_SERVER['PHP_SELF']);
                 <i class="bi bi-speedometer2"></i> <span>Dashboard</span>
             </a>
         </li>
+
         <li class="nav-section-label">CONTENT</li>
         <li class="nav-item">
             <a href="content.php" class="nav-link <?= $current === 'content.php' ? 'active' : '' ?>">
@@ -34,6 +35,19 @@ $current = basename($_SERVER['PHP_SELF']);
                 <i class="bi bi-images"></i> <span>Manage Images</span>
             </a>
         </li>
+
+        <li class="nav-section-label">NEWS & GALLERY</li>
+        <li class="nav-item">
+            <a href="news.php" class="nav-link <?= $current === 'news.php' ? 'active' : '' ?>">
+                <i class="bi bi-newspaper"></i> <span>Manage News</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="gallery.php" class="nav-link <?= $current === 'gallery.php' ? 'active' : '' ?>">
+                <i class="bi bi-camera"></i> <span>Manage Gallery</span>
+            </a>
+        </li>
+
         <li class="nav-section-label">ACCOUNT</li>
         <li class="nav-item">
             <a href="change_password.php" class="nav-link <?= $current === 'change_password.php' ? 'active' : '' ?>">

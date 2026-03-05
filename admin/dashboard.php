@@ -8,12 +8,20 @@ $pageTitle = 'Dashboard';
 $totalContent = $conn->query('SELECT COUNT(*) AS c FROM content')->fetch_assoc()['c'];
 $totalImages  = $conn->query('SELECT COUNT(*) AS c FROM images')->fetch_assoc()['c'];
 $totalAdmins  = $conn->query('SELECT COUNT(*) AS c FROM admin_users')->fetch_assoc()['c'];
+$totalNews    = $conn->query('SELECT COUNT(*) AS c FROM news')->fetch_assoc()['c'];
+$totalGallery = $conn->query('SELECT COUNT(*) AS c FROM gallery')->fetch_assoc()['c'];
 
 // ── Recent content updates ─────────────────────────────────
 $recentContent = $conn->query('SELECT section_name, content_text, updated_at FROM content ORDER BY updated_at DESC LIMIT 5');
 
 // ── Recent images ──────────────────────────────────────────
 $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM images ORDER BY uploaded_at DESC LIMIT 5');
+
+// ── Recent news ────────────────────────────────────────────
+$recentNews = $conn->query('SELECT title, date FROM news ORDER BY date DESC LIMIT 5');
+
+// ── Recent gallery ─────────────────────────────────────────
+$recentGallery = $conn->query('SELECT title, image, category FROM gallery ORDER BY date DESC LIMIT 5');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,7 +45,7 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
 
             <!-- Stat Cards -->
             <div class="row g-3 mb-4">
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-6 col-xl-2">
                     <div class="stat-card">
                         <div class="stat-icon blue"><i class="bi bi-file-text"></i></div>
                         <div>
@@ -46,7 +54,7 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-6 col-xl-2">
                     <div class="stat-card">
                         <div class="stat-icon green"><i class="bi bi-images"></i></div>
                         <div>
@@ -55,7 +63,7 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-6 col-xl-2">
                     <div class="stat-card">
                         <div class="stat-icon orange"><i class="bi bi-people"></i></div>
                         <div>
@@ -64,9 +72,27 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-xl-3">
+                <div class="col-sm-6 col-xl-2">
                     <div class="stat-card">
-                        <div class="stat-icon purple"><i class="bi bi-activity"></i></div>
+                        <div class="stat-icon purple"><i class="bi bi-newspaper"></i></div>
+                        <div>
+                            <div class="stat-value"><?= $totalNews ?></div>
+                            <div class="stat-label">News Articles</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-2">
+                    <div class="stat-card">
+                        <div class="stat-icon blue"><i class="bi bi-camera"></i></div>
+                        <div>
+                            <div class="stat-value"><?= $totalGallery ?></div>
+                            <div class="stat-label">Gallery Items</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xl-2">
+                    <div class="stat-card">
+                        <div class="stat-icon green"><i class="bi bi-activity"></i></div>
                         <div>
                             <div class="stat-value">Live</div>
                             <div class="stat-label">System Status</div>
@@ -75,6 +101,7 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
                 </div>
             </div>
 
+            <!-- Content + Images Row -->
             <div class="row g-4">
                 <!-- Recent Content Updates -->
                 <div class="col-lg-7">
@@ -153,6 +180,79 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
                 </div>
             </div>
 
+            <!-- News + Gallery Row -->
+            <div class="row g-4 mt-1">
+                <!-- Recent News -->
+                <div class="col-lg-6">
+                    <div class="admin-card h-100">
+                        <div class="admin-card-header">
+                            <h6><i class="bi bi-newspaper me-2 text-primary"></i>Recent News</h6>
+                            <a href="news.php" class="btn btn-sm btn-outline-primary">Manage All</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr><th>Title</th><th>Date</th><th></th></tr>
+                                </thead>
+                                <tbody>
+                                <?php if ($recentNews->num_rows === 0): ?>
+                                    <tr><td colspan="3" class="text-center text-muted py-4">No news yet</td></tr>
+                                <?php else: ?>
+                                <?php while ($n = $recentNews->fetch_assoc()): ?>
+                                <tr>
+                                    <td class="small"><?= htmlspecialchars($n['title']) ?></td>
+                                    <td class="text-muted small"><?= date('d M Y', strtotime($n['date'])) ?></td>
+                                    <td>
+                                        <a href="news.php" class="btn btn-sm btn-outline-secondary">
+                                            <i class="bi bi-pencil"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <?php endwhile; ?>
+                                <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Gallery -->
+                <div class="col-lg-6">
+                    <div class="admin-card h-100">
+                        <div class="admin-card-header">
+                            <h6><i class="bi bi-camera me-2 text-success"></i>Recent Gallery</h6>
+                            <a href="gallery.php" class="btn btn-sm btn-outline-success">Manage All</a>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table admin-table">
+                                <thead>
+                                    <tr><th>Image</th><th>Title</th><th>Category</th></tr>
+                                </thead>
+                                <tbody>
+                                <?php if ($recentGallery->num_rows === 0): ?>
+                                    <tr><td colspan="3" class="text-center text-muted py-4">No gallery items yet</td></tr>
+                                <?php else: ?>
+                                <?php while ($g = $recentGallery->fetch_assoc()): ?>
+                                <tr>
+                                    <td>
+                                        <?php if (file_exists('../uploads/' . $g['image'])): ?>
+                                        <img src="../uploads/<?= htmlspecialchars($g['image']) ?>" class="img-thumb" alt="">
+                                        <?php else: ?>
+                                        <div class="img-thumb-placeholder"><i class="bi bi-image"></i></div>
+                                        <?php endif; ?>
+                                    </td>
+                                    <td class="small"><?= htmlspecialchars($g['title']) ?></td>
+                                    <td><span class="badge bg-success"><?= ucfirst(htmlspecialchars($g['category'])) ?></span></td>
+                                </tr>
+                                <?php endwhile; ?>
+                                <?php endif; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Quick Actions -->
             <div class="admin-card mt-4">
                 <div class="admin-card-header">
@@ -161,6 +261,8 @@ $recentImages = $conn->query('SELECT image_name, image_path, uploaded_at FROM im
                 <div class="admin-card-body d-flex flex-wrap gap-2">
                     <a href="content.php" class="btn btn-primary"><i class="bi bi-pencil-square me-2"></i>Edit Content</a>
                     <a href="images.php" class="btn btn-success"><i class="bi bi-upload me-2"></i>Upload Image</a>
+                    <a href="news.php" class="btn btn-info text-white"><i class="bi bi-newspaper me-2"></i>Manage News</a>
+                    <a href="gallery.php" class="btn btn-secondary"><i class="bi bi-camera me-2"></i>Manage Gallery</a>
                     <a href="change_password.php" class="btn btn-outline-secondary"><i class="bi bi-shield-lock me-2"></i>Change Password</a>
                     <a href="logout.php" class="btn btn-outline-danger"><i class="bi bi-box-arrow-left me-2"></i>Logout</a>
                 </div>
