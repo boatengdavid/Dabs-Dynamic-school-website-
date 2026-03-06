@@ -190,7 +190,7 @@ function img($images, $key, $fallback = '') {
       </div>
       <div class="bg-gray-50 p-8 rounded-2xl shadow-md">
         <div class="text-green-600 text-4xl mb-4">"</div>
-        <p class="text-gray-700 italic mb-6">"Watching my children graduate from Dabs Dynamic with such stellar results has been one of my proudest moments as a father. The school didn't just provide an education; they nurtured their souls and sharpened their intellects. Seeing the godly character and academic brilliance they carry today is a testament to the school's impact. It has been a true blessing to our family."</p>
+        <p class="text-gray-700 italic mb-6">"Watching my children graduate from Dabs Dynamic with such stellar results has been one of my proudest moments as a father. The school didn't just provide an education; they nurtured their souls and sharpened their intellects. Seeing the Godly character and academic brilliance they carry today is a testament to the school's impact. It has been a true blessing to our family."</p>
         <div class="flex items-center justify-center gap-3">
           <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-700 font-bold">DT</div>
           <div class="text-left">
