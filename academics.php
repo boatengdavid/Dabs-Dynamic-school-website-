@@ -155,26 +155,26 @@ function img($images, $key, $fallback = '') {
       <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
           <div class="flex mb-4 text-yellow-400 text-lg">★★★★★</div>
-          <p class="text-gray-700 leading-relaxed mb-6">"Dabs Dynamic has transformed my child academically and morally. The discipline and quality teaching here are exceptional."</p>
+          <p class="text-gray-700 leading-relaxed mb-6">"Finding a school that balances rigorous academics with sound character development was my priority. Dabs Dynamic has exceeded my expectations in every way."</p>
           <div class="flex items-center gap-4">
             <img src="<?= img($images, 'testimonial_parent1', 'parent1.jpg') ?>" class="w-12 h-12 rounded-full object-cover" alt="Parent"/>
-            <div><h4 class="font-semibold text-green-900">Mrs. Adeyemi</h4><p class="text-sm text-gray-500">Parent</p></div>
+            <div><h4 class="font-semibold text-green-900">Mrs. Shiabu</h4><p class="text-sm text-gray-500">Parent</p></div>
           </div>
         </div>
         <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
           <div class="flex mb-4 text-yellow-400 text-lg">★★★★★</div>
-          <p class="text-gray-700 leading-relaxed mb-6">"The academic structure and ICT exposure prepared me excellently for my external examinations."</p>
+          <p class="text-gray-700 leading-relaxed mb-6">"Being a student at Dabs was a transformative experience. The teachers truly cared about my growth, and the academic rigors prepared me to excel in the competitive world outside the school gates."</p>
           <div class="flex items-center gap-4">
             <img src="<?= img($images, 'testimonial_student1', 'student1.jpg') ?>" class="w-12 h-12 rounded-full object-cover" alt="Student"/>
-            <div><h4 class="font-semibold text-green-900">Daniel O.</h4><p class="text-sm text-gray-500">SS3 Graduate</p></div>
+            <div><h4 class="font-semibold text-green-900">Ini Aguda.</h4><p class="text-sm text-gray-500">Alumna</p></div>
           </div>
         </div>
         <div class="bg-gray-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-500 hover:-translate-y-2">
           <div class="flex mb-4 text-yellow-400 text-lg">★★★★★</div>
-          <p class="text-gray-700 leading-relaxed mb-6">"Beyond academics, the school builds confidence, leadership, and strong moral values in students."</p>
+          <p class="text-gray-700 leading-relaxed mb-6">"What sets Dabs Dynamic apart is the balance. My children are excelling academically, but they are also developing strong leadership skills and a sense of responsibility. "</p>
           <div class="flex items-center gap-4">
             <img src="<?= img($images, 'testimonial_parent2', 'parent2.jpg') ?>" class="w-12 h-12 rounded-full object-cover" alt="Parent"/>
-            <div><h4 class="font-semibold text-green-900">Mr. Ibrahim</h4><p class="text-sm text-gray-500">Parent</p></div>
+            <div><h4 class="font-semibold text-green-900">Mr. Akinbiyi</h4><p class="text-sm text-gray-500">Parent</p></div>
           </div>
         </div>
       </div>
@@ -208,7 +208,7 @@ function img($images, $key, $fallback = '') {
           <div class="absolute top-6 left-6 bg-green-700 text-white px-5 py-2 rounded-full shadow-lg text-sm font-semibold">WAEC DISTINCTION</div>
         </div>
         <div>
-          <h3 class="text-3xl font-bold text-green-900 mb-4">Miss Deborah A.</h3>
+          <h3 class="text-3xl font-bold text-green-900 mb-4">Chijindu Emmanuel</h3>
           <p class="text-gray-600 mb-6 leading-relaxed">Achieved 9 A's in WAEC including Mathematics, English Language, Physics, Chemistry, and Biology. Now pursuing Medicine at a leading Nigerian university.</p>
           <div class="grid grid-cols-3 gap-6 mb-8 text-center">
             <div class="bg-white p-6 rounded-xl shadow-md"><h4 class="text-3xl font-bold text-green-700">9</h4><p class="text-sm text-gray-500">Distinctions</p></div>
@@ -234,7 +234,7 @@ function img($images, $key, $fallback = '') {
             <div class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-2xl shadow-xl">
               <img src="<?= img($images, 'spotlight_student1', 'student1.jpg') ?>" class="rounded-xl shadow-lg w-full object-cover" alt="Student 1"/>
               <div>
-                <h3 class="text-3xl font-bold text-green-900 mb-3">Miss Deborah A.</h3>
+                <h3 class="text-3xl font-bold text-green-900 mb-3">Dina Favour</h3>
                 <p class="text-gray-600 mb-6">9 A's in WAEC including Mathematics & English. Currently studying Medicine.</p>
                 <div class="flex gap-4 text-green-700 font-bold text-lg"><span>9 Distinctions</span><span>|</span><span>WAEC 2025</span></div>
               </div>
@@ -244,7 +244,7 @@ function img($images, $key, $fallback = '') {
             <div class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-2xl shadow-xl">
               <img src="<?= img($images, 'spotlight_student2', 'student2.jpg') ?>" class="rounded-xl shadow-lg w-full object-cover" alt="Student 2"/>
               <div>
-                <h3 class="text-3xl font-bold text-green-900 mb-3">Master Ibrahim K.</h3>
+                <h3 class="text-3xl font-bold text-green-900 mb-3">Chijindu Favour</h3>
                 <p class="text-gray-600 mb-6">8 A's in NECO with excellence in Sciences. Admitted to study Engineering.</p>
                 <div class="flex gap-4 text-green-700 font-bold text-lg"><span>8 Distinctions</span><span>|</span><span>NECO 2025</span></div>
               </div>
@@ -254,7 +254,7 @@ function img($images, $key, $fallback = '') {
             <div class="grid md:grid-cols-2 gap-10 items-center bg-white p-10 rounded-2xl shadow-xl">
               <img src="<?= img($images, 'spotlight_student3', 'student3.jpg') ?>" class="rounded-xl shadow-lg w-full object-cover" alt="Student 3"/>
               <div>
-                <h3 class="text-3xl font-bold text-green-900 mb-3">Miss Chioma E.</h3>
+                <h3 class="text-3xl font-bold text-green-900 mb-3">Akinbiyi Pelumi</h3>
                 <p class="text-gray-600 mb-6">Best Graduating Student with 7 A1's. Awarded Academic Excellence Medal.</p>
                 <div class="flex gap-4 text-green-700 font-bold text-lg"><span>7 Distinctions</span><span>|</span><span>Best Graduate</span></div>
               </div>
@@ -333,7 +333,8 @@ function img($images, $key, $fallback = '') {
             </ul>
           </div>
           <div>
-            <h4 class="text-white font-semibold mb-6 text-lg">Stay Connected</h4>
+            <h4 class="text-white font-semibold mb-6 text-lg">Join the DABS SCHOOL Community</h4>
+            <p class="text-slate-400 leading-relaxed">Sign up for our newsletter to stay connected with our students, faculty, and latest happenings.</p>
             <form class="flex flex-col space-y-4 mb-8">
               <input type="email" placeholder="Enter your email address" class="px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400"/>
               <button type="submit" class="bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition">Subscribe</button>

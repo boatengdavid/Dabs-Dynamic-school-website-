@@ -166,7 +166,8 @@ function c($content, $key, $fallback = '') {
             </ul>
           </div>
           <div>
-            <h4 class="text-white font-semibold mb-6 text-lg">Stay Connected</h4>
+            <h4 class="text-white font-semibold mb-6 text-lg">Join the DABS SCHOOL Community</h4>
+            <p class="text-slate-400 leading-relaxed">Sign up for our newsletter to stay connected with our students, faculty, and latest happenings.</p>
             <form class="flex flex-col space-y-4 mb-8">
               <input type="email" placeholder="Enter your email address" class="px-4 py-3 rounded-lg bg-slate-800 border border-slate-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400"/>
               <button type="submit" class="bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-800 transition">Subscribe</button>
